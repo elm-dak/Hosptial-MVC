@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xml:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="template1"
+>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,6 +12,9 @@
     <link rel="stylesheet" href="/webjars/bootstrap-icons/1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
+<div layout:fragment="content1" >
+
+
 <div class="p-4">
     <div class="card">
         <div class="card-header">
@@ -59,6 +66,19 @@
                     </td>
 
 
+                    <td>
+                        <a
+                                th:href="@{editPatients(id=${p.id},keyword=${keyword},page=${currentPage})}"
+                                class="btn btn-info">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                    </td>
+
+
+
+
+
+
                 </tr>
 
                 </thead>
@@ -76,7 +96,7 @@
         </div>
     </div>
 </div>
-
+</div>
 
 </body>
 </html>

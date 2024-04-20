@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.3.3/css/bootstrap-grid.min.css">
+    <script src="/webjars/bootstrap/5.3.3/js/bootstrap.bundle.js">
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark" data-bs-theme="dark">
+<div class="container-fluid" bis_skin_checked="1">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01" bis_skin_checked="1">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <a class="nav-link active" th:href="@{index}">Home
+                    <span class="visually-hidden">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Patients
+                </a>
+                <div class="dropdown-menu" bis_skin_checked="1">
+                    <a class="dropdown-item" th:href="@{/formPatients}">Nouveau </a>
+                    <a class="dropdown-item" th:href="@{/index}">Chercher </a>
+
+                </div>
+            </li>
+        </ul>
+
+
+
+
+        <ul class="nav-item dropdown text-info">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                [Username]
+            </a>
+            <div class="dropdown-menu" bis_skin_checked="1">
+                <a class="dropdown-item" th:href="@{/formPatients}">Logout </a>
+
+
+            </div>
+        </ul>
+
+    </div>
+</div>
+</nav>
+<section layout:fragment="content1">
+
+
+</section>
+</body>
+</html>
