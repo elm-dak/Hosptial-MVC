@@ -15,6 +15,11 @@
 ## Ajouter Icons
 ![Ajouter-Icons.png](images/Ajouter-Icons.png)
 
+## Formulaire de Patients
+![formPatients.png](images/formPatients.png)
+
+## Page Home Avec Navbar
+![home.png](images/home.png)
 
 
 
