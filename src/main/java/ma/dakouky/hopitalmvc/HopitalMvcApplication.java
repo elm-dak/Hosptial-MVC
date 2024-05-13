@@ -49,12 +49,12 @@ public class HopitalMvcApplication implements CommandLineRunner {
                 .build();
 */
 
-        patientRepository.save(new Patient(null,"mustapha",new Date(),false,225));
+       /* patientRepository.save(new Patient(null,"mustapha",new Date(),false,225));
         patientRepository.save(new Patient(null,"youness",new Date(),false,253));
         patientRepository.save(new Patient(null,"zakaria",new Date(),true,256));
 
 
-
+*/
 
 
     }

@@ -59,7 +59,7 @@ public class PatientController {
         model.addAttribute("patient",new Patient());
         return "formPatients";
 
-    }
+    }/*
 
     @PostMapping("/save")
     public String save(Model model, @Valid Patient patient,
@@ -89,5 +89,24 @@ public class PatientController {
         return "editPatients";
 
     }
+*/
 
+    @PostMapping (path = "/save")
+    public String save(Model model, @Valid Patient patient, BindingResult bindingResult, // pour faire la validation tu doit 3 chose a faire la premier c est les inotation de Validation ajoute LE (size emty  DECIMAL MIN... et pour la troisieme c est au niveau de controlleur il faut utilise la notation Valide et BindingResult
+                       @RequestParam(defaultValue = "0")  int page,
+                       @RequestParam(defaultValue = "") String keyword){
+        if (bindingResult.hasErrors()) return "formPatients";
+        patientRepository.save(patient);
+        return "redirect:/index?page="+page+"&keyword="+keyword;
+    }
+    @GetMapping("/editPatients")
+    public String editPatient(Model model, Long id, String keyword, int page){
+        Patient patient=patientRepository.findById(id).orElse(null);
+        if (patient==null) throw new RuntimeException("patient introuvable");
+        model.addAttribute("patient",patient);
+        model.addAttribute("page",page);
+        model.addAttribute("keyword",keyword);
+        return "editPatients";
+
+    }
 }
