@@ -21,8 +21,12 @@
 ## Page Home Avec Navbar
 ![home.png](images/home.png)
 
+### Add security login page 
+![security.png](images/security.png)
 
 
+### Modifie Navbar login with name user
+![Navbar-data.png](images/Navbar-data.png)
 
 
 

@@ -43,12 +43,15 @@
 
 
         <ul class="nav-item dropdown text-info">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                [Username]
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+
+               th:text="${#authentication.name}">
+
             </a>
             <div class="dropdown-menu" bis_skin_checked="1">
-                <a class="dropdown-item" th:href="@{/formPatients}">Logout </a>
-
+                <form method="post" th:action="@{/logout}">
+                    <button class="dropdown-item" type="submit" >Logout</button>
+                </form>
 
             </div>
         </ul>
